@@ -1,0 +1,46 @@
+package com.lnzz.pojo;
+
+import lombok.Data;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+/**
+ * ClassName：Order
+ *
+ * @author 冷暖自知
+ * @version 1.0
+ * @date 2020/1/16 18:17
+ * @Description:
+ */
+@Data
+public class Order {
+    private Integer id;
+
+    private Long orderNo;
+
+    private Integer userId;
+
+    private Integer shippingId;
+
+    private BigDecimal payment;
+
+    private Integer paymentType;
+
+    private Integer postage;
+
+    private Integer status;
+
+    private Date paymentTime;
+
+    private Date sendTime;
+
+    private Date endTime;
+
+    private Date closeTime;
+
+    private Date createTime;
+
+    private Date updateTime;
+
+}
