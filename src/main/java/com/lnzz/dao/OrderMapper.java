@@ -11,15 +11,51 @@ import com.lnzz.pojo.Order;
  * @Description:
  */
 public interface OrderMapper {
+    /**
+     * deleteByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     int deleteByPrimaryKey(Integer id);
 
+    /**
+     * insert
+     *
+     * @param record
+     * @return
+     */
     int insert(Order record);
 
+    /**
+     * insertSelective
+     *
+     * @param record
+     * @return
+     */
     int insertSelective(Order record);
 
+    /**
+     * selectByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     Order selectByPrimaryKey(Integer id);
 
+    /**
+     * updateByPrimaryKeySelective
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKeySelective(Order record);
 
+    /**
+     * updateByPrimaryKey
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKey(Order record);
 }

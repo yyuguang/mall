@@ -11,15 +11,51 @@ import com.lnzz.pojo.PayInfo;
  * @Description:
  */
 public interface PayInfoMapper {
+    /**
+     * deleteByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     int deleteByPrimaryKey(Integer id);
 
+    /**
+     * insert
+     *
+     * @param record
+     * @return
+     */
     int insert(PayInfo record);
 
+    /**
+     * insertSelective
+     *
+     * @param record
+     * @return
+     */
     int insertSelective(PayInfo record);
 
+    /**
+     * selectByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     PayInfo selectByPrimaryKey(Integer id);
 
+    /**
+     * updateByPrimaryKeySelective
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKeySelective(PayInfo record);
 
+    /**
+     * updateByPrimaryKey
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKey(PayInfo record);
 }

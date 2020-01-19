@@ -11,15 +11,51 @@ import com.lnzz.pojo.Category;
  * @Description:
  */
 public interface CategoryMapper {
+    /**
+     * deleteByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     int deleteByPrimaryKey(Integer id);
 
+    /**
+     * insert
+     *
+     * @param record
+     * @return
+     */
     int insert(Category record);
 
+    /**
+     * insertSelective
+     *
+     * @param record
+     * @return
+     */
     int insertSelective(Category record);
 
+    /**
+     * selectByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     Category selectByPrimaryKey(Integer id);
 
+    /**
+     * updateByPrimaryKeySelective
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKeySelective(Category record);
 
+    /**
+     * updateByPrimaryKey
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKey(Category record);
 }

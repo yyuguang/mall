@@ -11,15 +11,51 @@ import com.lnzz.pojo.Shipping;
  * @Description:
  */
 public interface ShippingMapper {
+    /**
+     * deleteByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     int deleteByPrimaryKey(Integer id);
 
+    /**
+     * insert
+     *
+     * @param record
+     * @return
+     */
     int insert(Shipping record);
 
+    /**
+     * insertSelective
+     *
+     * @param record
+     * @return
+     */
     int insertSelective(Shipping record);
 
+    /**
+     * selectByPrimaryKey
+     *
+     * @param id
+     * @return
+     */
     Shipping selectByPrimaryKey(Integer id);
 
+    /**
+     * updateByPrimaryKeySelective
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKeySelective(Shipping record);
 
+    /**
+     * updateByPrimaryKey
+     *
+     * @param record
+     * @return
+     */
     int updateByPrimaryKey(Shipping record);
 }
