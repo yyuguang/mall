@@ -1,4 +1,4 @@
-package com.lnzz.pojo;
+package com.lnzz.vo;
 
 import lombok.Data;
 
@@ -6,15 +6,15 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * ClassName：Product
+ * ClassName：ProductDetailVo
  *
  * @author 冷暖自知
  * @version 1.0
- * @date 2020/1/16 18:17
+ * @date 2020/1/21 16:09
  * @Description:
  */
 @Data
-public class Product {
+public class ProductDetailVo {
     private Integer id;
 
     private Integer categoryId;
@@ -38,5 +38,4 @@ public class Product {
     private Date createTime;
 
     private Date updateTime;
-
 }
