@@ -33,12 +33,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResponseVo register(@Valid @RequestBody UserRegisterForm userRegisterForm,
-                               BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return ResponseVo.error(ResponseEnum.PARAM_ERROR, bindingResult);
-        }
-
+    public ResponseVo register(@Valid @RequestBody UserRegisterForm userRegisterForm) {
         User user = new User();
         BeanUtils.copyProperties(userRegisterForm, user);
         return userService.register(user);
@@ -46,14 +41,9 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseVo login(@Valid @RequestBody UserLoginForm userLoginForm,
-                            BindingResult bindingResult,
                             HttpSession session) {
-        if (bindingResult.hasErrors()) {
-            return ResponseVo.error(ResponseEnum.PARAM_ERROR, bindingResult);
-        }
 
         ResponseVo<User> userResponseVo = userService.login(userLoginForm.getUsername(), userLoginForm.getPassword());
-
         //设置Session
         session.setAttribute(MallConst.CURRENT_USER, userResponseVo.getData());
         return userResponseVo;
