@@ -34,7 +34,7 @@ public class CartController {
         return cartService.list(user.getId());
     }
 
-    @PostMapping("/addCart")
+    @PostMapping("/add")
     public ResponseVo<CartVo> add(@Valid @RequestBody CartAddForm cartAddForm,
                                   HttpSession session) {
         User user = (User) session.getAttribute(MallConst.CURRENT_USER);
