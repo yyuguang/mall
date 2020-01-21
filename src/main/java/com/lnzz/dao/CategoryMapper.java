@@ -2,6 +2,8 @@ package com.lnzz.dao;
 
 import com.lnzz.pojo.Category;
 
+import java.util.List;
+
 /**
  * ClassName：CategoryMapper
  *
@@ -58,4 +60,11 @@ public interface CategoryMapper {
      * @return
      */
     int updateByPrimaryKey(Category record);
+
+    /**
+     * selectAll
+     *
+     * @return
+     */
+    List<Category> selectAll();
 }
