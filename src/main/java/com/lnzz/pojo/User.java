@@ -1,6 +1,7 @@
 package com.lnzz.pojo;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
@@ -12,7 +13,9 @@ import java.util.Date;
  * @date 2020/1/16 18:17
  * @Description:
  */
+
 @Data
+@NoArgsConstructor
 public class User {
     private Integer id;
 
@@ -34,4 +37,9 @@ public class User {
 
     private Date updateTime;
 
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 }

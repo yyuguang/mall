@@ -2,14 +2,6 @@ package com.lnzz.dao;
 
 import com.lnzz.pojo.User;
 
-/**
- * ClassName：UserMapper
- *
- * @author 冷暖自知
- * @version 1.0
- * @date 2020/1/16 18:17
- * @Description:
- */
 public interface UserMapper {
     /**
      * deleteByPrimaryKey
@@ -20,6 +12,8 @@ public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
     /**
+     * insert
+     *
      * @param record
      * @return
      */
@@ -56,4 +50,28 @@ public interface UserMapper {
      * @return
      */
     int updateByPrimaryKey(User record);
+
+    /**
+     * countByUsername
+     *
+     * @param username
+     * @return
+     */
+    int countByUsername(String username);
+
+    /**
+     * countByEmail
+     *
+     * @param email
+     * @return
+     */
+    int countByEmail(String email);
+
+    /**
+     * selectByUsername
+     *
+     * @param username
+     * @return
+     */
+    User selectByUsername(String username);
 }
