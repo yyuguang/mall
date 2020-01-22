@@ -642,14 +642,16 @@ success
 > request
 
 ```
-receiverName=廖师兄
-receiverPhone=010
-receiverMobile=18688888888
-receiverProvince=北京
-receiverCity=北京市
-receiverDistrict=海淀区
-receiverAddress=中关村
-receiverZip=100000
+{
+    "receiverName":"小杨",
+    "receiverPhone":"010",
+    "receiverMobile":"18688888888",
+    "receiverProvince":"北京",
+    "receiverCity":"北京市",
+    "receiverDistrict":"海淀区",
+    "receiverAddress":"中关村",
+    "receiverZip":"100000"
+}
 ```
 
 > response
@@ -659,7 +661,6 @@ success
 ```
 {
     "status": 0,
-    "msg": "新建地址成功",
     "data": {
         "shippingId": 28
     }

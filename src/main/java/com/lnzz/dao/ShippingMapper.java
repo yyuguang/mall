@@ -1,6 +1,9 @@
 package com.lnzz.dao;
 
 import com.lnzz.pojo.Shipping;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * ClassName：ShippingMapper
@@ -58,4 +61,20 @@ public interface ShippingMapper {
      * @return
      */
     int updateByPrimaryKey(Shipping record);
+
+    /**
+     * deleteByIdAndUid
+     *
+     * @param uid
+     * @param shippingId
+     * @return
+     */
+    int deleteByIdAndUid(@Param("uid") Integer uid, @Param("shippingId") Integer shippingId);
+
+    /**
+     * selectByUid
+     * @param uid
+     * @return
+     */
+    List<Shipping> selectByUid(@Param("uid") Integer uid);
 }
