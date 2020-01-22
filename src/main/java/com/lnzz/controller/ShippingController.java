@@ -32,7 +32,7 @@ public class ShippingController {
         return shippingService.add(user.getId(), form);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{shippingId}")
     public ResponseVo delete(@PathVariable Integer shippingId,
                              HttpSession session) {
         User user = (User) session.getAttribute(MallConst.CURRENT_USER);
