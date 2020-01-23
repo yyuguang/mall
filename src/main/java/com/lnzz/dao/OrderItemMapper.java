@@ -1,6 +1,10 @@
 package com.lnzz.dao;
 
 import com.lnzz.pojo.OrderItem;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+import java.util.Set;
 
 /**
  * ClassName：OrderItemMapper
@@ -58,4 +62,22 @@ public interface OrderItemMapper {
      * @return
      */
     int updateByPrimaryKey(OrderItem record);
+
+    /**
+     * 批量插入
+     * batchInsert
+     *
+     * @param orderItemList
+     * @return
+     */
+    int batchInsert(@Param("orderItemList") List<OrderItem> orderItemList);
+
+
+    /**
+     * selectOrderByNoSet
+     *
+     * @param orderNoSet
+     * @return
+     */
+    List<OrderItem> selectByOrderNoSet(@Param("orderNoSet") Set orderNoSet);
 }

@@ -70,4 +70,11 @@ public interface ProductMapper {
      * @return
      */
     List<Product> selectByCategoryIdSet(@Param("categoryIdSet") Set<Integer> categoryIdSet);
+
+    /**
+     * selectByProductIdSet
+     * @param productIdSet
+     * @return
+     */
+    List<Product> selectByProductIdSet(@Param("productIdSet") Set<Integer> productIdSet);
 }

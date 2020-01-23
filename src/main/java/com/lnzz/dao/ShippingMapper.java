@@ -4,6 +4,7 @@ import com.lnzz.pojo.Shipping;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * ClassName：ShippingMapper
@@ -73,8 +74,26 @@ public interface ShippingMapper {
 
     /**
      * selectByUid
+     *
      * @param uid
      * @return
      */
     List<Shipping> selectByUid(@Param("uid") Integer uid);
+
+    /**
+     * selectByUidAndShippingId
+     *
+     * @param uid
+     * @param shippingId
+     * @return
+     */
+    Shipping selectByUidAndShippingId(@Param("uid") Integer uid, @Param("shippingId") Integer shippingId);
+
+    /**
+     * selectByIdSet
+     *
+     * @param idSet
+     * @return
+     */
+    List<Shipping> selectByIdSet(@Param("idSet") Set idSet);
 }

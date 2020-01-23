@@ -1,6 +1,10 @@
 package com.lnzz.dao;
 
 import com.lnzz.pojo.Order;
+import com.sun.org.apache.xpath.internal.operations.Or;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * ClassName：OrderMapper
@@ -58,4 +62,20 @@ public interface OrderMapper {
      * @return
      */
     int updateByPrimaryKey(Order record);
+
+    /**
+     * selectByUid
+     *
+     * @param uid
+     * @return
+     */
+    List<Order> selectByUid(Integer uid);
+
+    /**
+     * selectByOrderNo
+     *
+     * @param orderNo
+     * @return
+     */
+    Order selectByOrderNo(Long orderNo);
 }

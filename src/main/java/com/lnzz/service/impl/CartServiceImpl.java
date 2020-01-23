@@ -53,7 +53,7 @@ public class CartServiceImpl implements CartService {
         }
 
         //2.判断商品是否正常在售
-        if (!product.getStatus().equals(ProductStatusEnum.ON_CELL.getCode())) {
+        if (!product.getStatus().equals(ProductStatusEnum.ON_SALE.getCode())) {
             return ResponseVo.error(ResponseEnum.PRODUCT_OFF_SALE_OR_DELETE);
         }
 

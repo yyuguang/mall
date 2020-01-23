@@ -15,7 +15,7 @@ public enum ProductStatusEnum {
     /**
      * 在售
      */
-    ON_CELL(1),
+    ON_SALE(1),
 
     /**
      * 下架
