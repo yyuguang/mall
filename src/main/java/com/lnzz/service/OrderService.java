@@ -44,10 +44,19 @@ public interface OrderService {
 
     /**
      * cancel
+     *
      * @param uid
      * @param orderNo
      * @return
      */
     ResponseVo cancel(Integer uid, Long orderNo);
+
+    /**
+     * paid
+     * 已支付
+     *
+     * @param orderNo
+     */
+    void paid(Long orderNo);
 
 }
