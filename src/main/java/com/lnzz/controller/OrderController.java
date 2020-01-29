@@ -36,8 +36,8 @@ public class OrderController {
     }
 
     @GetMapping("/list")
-    public ResponseVo<PageInfo> list(@RequestParam Integer pageNum,
-                                     @RequestParam Integer pageSize,
+    public ResponseVo<PageInfo> list(@RequestParam(required = false, defaultValue = "1") Integer pageNum,
+                                     @RequestParam(required = false, defaultValue = "10") Integer pageSize,
                                      HttpSession session) {
         User user = (User) session.getAttribute(MallConst.CURRENT_USER);
         return orderService.list(user.getId(), pageNum, pageSize);
