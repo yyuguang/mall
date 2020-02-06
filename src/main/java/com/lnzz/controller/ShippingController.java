@@ -20,7 +20,7 @@ import javax.validation.Valid;
  * @Description:
  */
 @RestController
-@RequestMapping("/api/shipping")
+@RequestMapping("/shipping")
 public class ShippingController {
     @Autowired
     private ShippingService shippingService;

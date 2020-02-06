@@ -22,7 +22,7 @@ import javax.validation.Valid;
  * @Description:
  */
 @RestController
-@RequestMapping("/api/order")
+@RequestMapping("/order")
 public class OrderController {
 
     @Autowired

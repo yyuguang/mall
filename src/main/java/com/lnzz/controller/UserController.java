@@ -25,7 +25,7 @@ import javax.validation.Valid;
  * @Description:
  */
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/user")
 @Slf4j
 public class UserController {
 
